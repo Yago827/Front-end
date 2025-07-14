@@ -1,0 +1,334 @@
+@import url('./reset.css');
+
+/* **** Especificações Gerais do Projeto ****************** 
+  (acessível e utilizada em todas páginas do projeto)
+  **************************** */
+:root {
+ --cor-destaque: #ea1d2c;
+ --cor-principal:white;
+ --cor-contraste:hsl(0, 0%, 0%);
+ 
+}
+body{
+ background-color: var(--cor-principal);
+ color:var(--cor-contraste)
+} 
+
+.container1 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:center ;
+    align-items:start;
+}
+
+.form-endereco {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 80px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f1f1f1;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: none;
+  margin-top: 3px;
+}
+
+.btn-personalizado {
+  background-color: #ea1d2c;
+  color: white;
+  border: none;
+  padding: 1% 15px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-top: 80px;
+}
+
+.btn-personalizado:hover {
+  background-color: #c21825;
+}
+
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.categorias button {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  margin-top: 30px;
+}
+
+.categorias button:hover {
+  background-color: #e0e0e0;
+}
+
+
+
+nav {
+  display: flex;
+  margin-top: 35px;
+
+}
+
+/* este seletor seleciona todos filhos diretos do container*/
+
+.menu-sticky {
+  position: sticky;
+  top: 0;
+  background-color: #f7f7f7;
+  padding: 0px 0;
+  text-align:center;
+  z-index: 1000;
+  height: 100px; /* Altura definida explicitamente */
+}
+
+
+.menu-sticky nav a {
+  color: #3e3e3e;
+  text-decoration: none;
+  margin: 0 4px;
+}
+
+.menu-sticky nav a:hover {
+  color: var(--cor-destaque);
+  text-decoration: underline;
+}
+
+.login {
+  padding: 10px ; 
+  min-height: 100vh ;
+  text-align: center;
+  scroll-margin-top: 100px; /* Corresponde à altura do menu */
+  
+}
+
+.sobre {
+  background-color: #fff8f5;
+  padding: 60px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.sobre h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #e3222e; /* vermelho iFood */
+}
+
+.sobre p {
+  max-width: 700px;
+  margin: 0 auto 15px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#home {
+  background-color: #ffffff;
+}
+
+#sobre {
+  background-color: #ffffff;
+}
+
+#login {
+  background-color: #ffffff;
+}
+
+nav {
+ font-size: 1.0rem;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+.figurform {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+@media (max-width: 900px) {
+  .figurform{
+    grid-template-columns: 1fr;
+  }
+}
+
+.formulario fieldset {
+  display: grid;
+  padding: 20px;
+  gap: 4px;
+}
+.figurform img {
+  max-width: 100%;
+  height: auto;
+}
+
+.formulario fieldset input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background-color: #d1d1d1;
+  color: rgb(73, 50, 50);
+  text-align: center;
+  padding: 20px;
+}
+
+.mosaico {
+  min-height: 70vh;
+  padding: 2rem;
+}
+
+.grid-fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  min-height: 70vh;
+}
+
+.foto {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 200px;
+}
+
+.foto1 { background-image: url('../img/acai.webp'); height: 300px; }
+.foto2 { background-image: url('../img/hamburgui.webp'); height: 275px; }
+.foto3 { background-image: url('../img/pizza.webp'); height: 300px; }
+.foto4 { background-image: url('../img/sla.webp'); height: 275px; }
+.foto5 { background-image: url('../img/sushi.webp'); height: 300px; }
+
+/* Responsividade opcional (já é flexível com auto-fit) */
+@media (max-width: 600px) {
+  .foto {
+    height: 150px;
+  }
+}
+
+#animacao {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a30e0e;
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Mulish', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+#animacao h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  animation: pulseRed 2.5s infinite ease-in-out;
+  text-shadow: 0 0 5px #ea1d2c;
+}
+
+#animacao p {
+  max-width: 600px;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  opacity: 1;
+  transition: color 0.5s ease, transform 0.5s ease; /* Transição adicionada */
+  cursor: pointer;
+}
+
+/* Transição no hover do parágrafo (exemplo claro do uso transition) */
+#animacao p:hover {
+  color: #ea1d2c;
+  transform: scale(1.05);
+}
+
+#animacao .btn-animado {
+  background-color: var(--cor-destaque);
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--cor-destaque);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  animation: buttonGlow 3s infinite ease-in-out;
+}
+
+#animacao .btn-animado:hover {
+  background-color: #c21825;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #c21825;
+}
+
+@keyframes pulseRed {
+  0%, 100% {
+    text-shadow: 0 0 5px #ea1d2c, 0 0 10px #ea1d2c;
+    color: #b30e15;
+  }
+  50% {
+    text-shadow: 0 0 15px #ea1d2c, 0 0 30px #ea1d2c;
+    color: #f53838;
+  }
+}
+
+@keyframes buttonGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px var(--cor-destaque);
+  }
+  50% {
+    box-shadow: 0 0 25px #ea1d2c;
+  }
+}
+
+@media (max-width: 600px) {
+  #animacao h2 {
+    font-size: 2.5rem;
+  }
+
+  #animacao p {
+    font-size: 1rem;
+  }
+
+  #animacao .btn-animado {
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+  }
+}
